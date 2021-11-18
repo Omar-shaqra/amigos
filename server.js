@@ -8,6 +8,8 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine','ejs');
 app.use(bodyparser.urlencoded({extended:true}));
 
+const port = process.env.PORT || 3000;
+
 var nodemailer = require('nodemailer');
 //let transporter = nodemailer.createTransport(options[, defaults])
 var transporter = nodemailer.createTransport({
@@ -19,7 +21,7 @@ var transporter = nodemailer.createTransport({
 });
 
 
-app.listen(3390,function(){
+app.listen(port,function(){
 console.log("stat server on 3390");
 
 });
