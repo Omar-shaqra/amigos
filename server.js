@@ -22,7 +22,7 @@ var transporter = nodemailer.createTransport({
 
 
 app.listen(port,function(){
-console.log("stat server on 3390");
+console.log("stat server on 3000");
 
 });
 
